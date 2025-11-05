@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/mapa_seguridad.css">
+    <title>Mapa de seguridad</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">ViviEstu</div>
+      <div class="menu">
+        <a href="#">Inicio</a>
+        <a href="#">Zonas</a>
+        <a href="#">Comparador</a>
+        <a href="#">Comunidad</a>
+        <a href="#">Contacto</a>
+      </div>
+      <div class="botones">
+        <button class="btn iniciar">Iniciar Sesión</button>
+        <button class="btn registrar">Registrarse</button>
+      </div>
+    </nav>
+  </header>
+
+  <h2 style="color:#007c91; margin-top:25px;">Mapa de Seguridad ViviEstu</h2>
+  <p>Zonas seguras (verde) y zonas de riesgo (rojo)</p>
+
+  <div class="map-container">
+    <img src="../asset/Mapa_seguridad.png" alt="Mapa_seguridad" />
+
+    <!-- Puntos fijos -->
+    <div class="punto verde" style="top: 25%; left: 30%;" title="Zona segura"></div>
+    <div class="punto rojo" style="top: 40%; left: 60%;" title="Zona peligrosa"></div>
+    <div class="punto verde" style="top: 55%; left: 45%;" title="Zona segura"></div>
+    <div class="punto rojo" style="top: 70%; left: 35%;" title="Zona peligrosa"></div>
+    <div class="punto verde" style="top: 15%; left: 55%;" title="Zona segura"></div>
+    <div class="punto rojo" style="top: 60%; left: 70%;" title="Zona peligrosa"></div>
+  </div>
+
+  <footer>© 2025 ViviEstu - Visualización de zonas</footer>
+</body>
+</html>
