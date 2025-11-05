@@ -84,8 +84,3 @@ button {
 button:hover {
   background-color: #222244;
 }
-
-button.registrar {
-  background-color: transparent;
-  color: black;
-}

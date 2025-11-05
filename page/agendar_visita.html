@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Visita - ViviEstu</title>
+    <link rel="stylesheet" href="../css/agendar_visita.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="../asset/Logo.png" alt="ViviEstu Logo" class="logo">
+        </div>
+        <nav class="nav-menu">
+            <a href="#">Inicio</a>
+            <a href="#">Mis Reservas</a>
+            <a href="#">Perfil</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Left Section: Scheduling -->
+            <div class="scheduling-section">
+                <h1 class="title-agendar">AGENDAR</h1>
+
+                <div class="schedule-options">
+                    <!-- Fecha Button -->
+                    <div class="schedule-item">
+                        <button class="btn-circle" aria-label="Agregar fecha">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <span class="schedule-label">FECHA</span>
+                    </div>
+
+                    <!-- Hora Button -->
+                    <div class="schedule-item">
+                        <button class="btn-circle" aria-label="Agregar hora">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <span class="schedule-label">HORA</span>
+                    </div>
+
+                    <!-- Notificación Button -->
+                    <div class="schedule-item">
+                        <button class="btn-circle" aria-label="Agregar notificación">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <span class="schedule-label">AGREGAR NOTIFICACIÓN</span>
+                    </div>
+                </div>
+
+                <button class="btn-confirmar">Confirmar Reserva</button>
+            </div>
+
+            <!-- Right Section: Image -->
+            <div class="image-section">
+                <div class="image-placeholder">
+                    <!-- Reemplazar este div con: <img src="URL_DE_LA_IMAGEN" alt="Propiedad"> -->
+                    <p>Aquí irá la imagen</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Details Section -->
+        <section class="details-section">
+            <div class="details-container">
+                <h2 class="details-title">DETALLES</h2>
+
+                <div class="details-content">
+                    <h3 class="details-subtitle">Descripción</h3>
+                    <p class="description-text">
+                        Acogedor departamento de 2 dormitorios ubicado en una zona tranquila y segura,
+                        ideal para estudiantes. Cuenta con todos los servicios básicos, internet de alta
+                        velocidad, y está cerca de universidades y centros comerciales. El ambiente es
+                        perfecto para el estudio y la convivencia.
+                    </p>
+
+                    <div class="rating-container">
+                        <span class="rating-label"><strong>Puntuación:</strong></span>
+                        <div class="stars">
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                            <span class="star">⭐</span>
+                        </div>
+                        <span class="rating-number">(5.0)</span>
+                    </div>
+
+                    <div class="property-features">
+                        <div class="feature-item">
+                            <i class="fas fa-bed"></i>
+                            <span>2 Habitaciones</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-bath"></i>
+                            <span>1 Baño</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>WiFi Incluido</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Cerca a Universidades</span>
+                        </div>
+                    </div>
+
+                    <div class="price-info">
+                        <span class="price-label">Precio mensual:</span>
+                        <span class="price-amount">S/ 800.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-section">
+                    <h4>Nosotros</h4>
+                    <p>ViviEstu es tu plataforma confiable para encontrar el alojamiento perfecto durante tus estudios.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Centro de Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Políticas de Privacidad</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contáctanos</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@viviestu.com</li>
+                        <li><i class="fas fa-phone"></i> +51 999 999 999</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Lima, Perú</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h2 class="footer-brand">ViviEstu</h2>
+                <p class="footer-tagline">Tu hogar mientras estudias</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 ViviEstu. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/agendar_visita.js"></script>
+</body>
+</html>
+
