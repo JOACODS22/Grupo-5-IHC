@@ -1,32 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo 5 IHC</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ViviEstu</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="form-container">
-    <div class="header">
-      <div class="logo">
-        <img src="../asset/Logo.png" alt="Logo">
-      </div>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="https://placehold.co/60x60" alt="Logo">
+      <span>ViviEstu</span>
     </div>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Zonas</a></li>
+      <li><a href="#">Comparador</a></li>
+      <li><a href="#">Comunidad</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+    <div class="nav-buttons">
+      <button class="btn-login">Iniciar Sesión</button>
+      <button class="btn-register">Registrarse</button>
+    </div>
+  </nav>
 
-    <div class="form-content">
-      <h1>Iniciar sesión</h1>
-
-      <form>
-        <input type="email" id="email" placeholder="Email">
-        <input type="password" id="password" placeholder="Contraseña">
-
-        <button type="submit">Iniciar sesion</button>
-        <a href="page/registrar.html">
-            <button class="registrar" type="button">Registrarse</button>
-        </a>
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Encuentra la zona ideal para vivir</h1>
+      <p>Toma decisiones rápidas y seguras con datos verificados.</p>
+      <form class="search-bar">
+        <input type="text" placeholder="Ingresa ubicaciones o características">
+        <button type="submit">Buscar</button>
       </form>
     </div>
-  </div>
+  </section>
+
+  <section class="main-content">
+    <h2>¿Cómo te ayuda ViviEstu?</h2>
+    <div class="features">
+      <div class="card">
+        <img src="https://placehold.co/100x100" alt="">
+        <h3>Compara zonas</h3>
+        <p>Precio, seguridad y transporte</p>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/100x100" alt="">
+        <h3>Simula tu costo mensual</h3>
+        <p>Alquiler + transporte</p>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/100x100" alt="">
+        <h3>Simula mapas</h3>
+        <p>Con reseñas verificadas</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="recommendations">
+    <h2>Viviendas Destacadas</h2>
+    <div class="property-grid">
+      <div class="property">
+        <img src="https://placehold.co/300x200" alt="">
+        <h3>San Borja – Zona Residencial Segura</h3>
+        <p>Venta desde S/ 1 180 000</p>
+      </div>
+      <div class="property">
+        <img src="https://placehold.co/300x200" alt="">
+        <h3>Surco – Cerca a Universidades</h3>
+        <p>Venta desde S/ 843 150</p>
+      </div>
+      <div class="property">
+        <img src="https://placehold.co/300x200" alt="">
+        <h3>San Isidro – Zona Premium Segura</h3>
+        <p>Venta desde S/ 546 460</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Lo Que Dicen Otros Estudiantes</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p>“Gracias a ViviEstu encontré una vivienda segura y económica cerca de mi universidad.”</p>
+        <div class="user">
+          <img src="https://placehold.co/60x60" alt="">
+          <div>
+            <strong>Carla Ramos</strong><br>
+            <small>Estudiante de Arquitectura</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p>“El comparador de zonas fue muy útil para encontrar el lugar ideal.”</p>
+        <div class="user">
+          <img src="https://placehold.co/60x60" alt="">
+          <div>
+            <strong>Lucía Huamán</strong><br>
+            <small>Estudiante de Administración</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="community">
+    <h2>Sé Parte De ViviEstu</h2>
+    <form class="join-form">
+      <input type="email" placeholder="Tu correo institucional aquí">
+      <button>Unirme a ViviEstu</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-cols">
+      <div>
+        <h3>Explorar</h3>
+        <ul>
+          <li><a href="#">Zonas Cercanas</a></li>
+          <li><a href="#">Comparador</a></li>
+          <li><a href="#">Viviendas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Sobre Nosotros</h3>
+        <ul>
+          <li><a href="#">Quiénes Somos</a></li>
+          <li><a href="#">Misión y Visión</a></li>
+          <li><a href="#">Equipo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <p>Lima Metropolitana, Perú<br>(01) 345-9823<br>contacto@viviestu.pe</p>
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 ViviEstu. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>

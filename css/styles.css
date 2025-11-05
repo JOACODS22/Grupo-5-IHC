@@ -1,0 +1,44 @@
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:#333}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:15px 60px;background:white;box-shadow:0 2px 8px rgba(0,0,0,0.1);position:sticky;top:0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:bold}
+.navbar ul{display:flex;gap:20px;list-style:none}
+.navbar a{text-decoration:none;color:#333;transition:color .3s}
+.navbar a:hover{color:#419aa2}
+.btn-login{background:#f99f1c}
+.btn-register{background:#419aa2}
+.nav-buttons button{margin-left:10px;padding:10px 20px;border:none;border-radius:50px;cursor:pointer;color:#fff;font-weight:bold;transition:opacity .3s}
+.nav-buttons button:hover{opacity:.85}
+.hero{position:relative;background:url('https://placehold.co/1440x645') center/cover no-repeat;height:600px;color:#fff;text-align:center}
+.hero .overlay{position:absolute;inset:0;background:rgba(0,0,0,.5)}
+.hero-content{position:relative;top:50%;transform:translateY(-50%)}
+.hero h1{font-size:48px;margin-bottom:10px}
+.hero p{font-size:18px;margin-bottom:20px}
+.search-bar{display:inline-flex;border-radius:50px;overflow:hidden;background:white}
+.search-bar input{border:none;padding:10px 15px;width:300px}
+.search-bar button{background:#419aa2;color:white;border:none;padding:10px 20px;cursor:pointer;transition:background .3s}
+.search-bar button:hover{background:#357d84}
+.main-content{text-align:center;padding:60px 20px}
+.features{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.card{width:250px;background:#f5f5f5;padding:20px;border-radius:12px;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-5px);box-shadow:0 5px 15px rgba(0,0,0,.1)}
+.card img{border-radius:50%}
+.recommendations{padding:60px 40px;text-align:center}
+.property-grid{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.property{width:300px;border-radius:10px;overflow:hidden;transition:transform .3s}
+.property img{width:100%}
+.property:hover{transform:scale(1.03)}
+.testimonials{padding:60px 20px;background:#f7f9fa;text-align:center}
+.testimonial-grid{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.testimonial{background:white;border-radius:10px;padding:20px;width:320px;box-shadow:0 4px 10px rgba(0,0,0,.1)}
+.testimonial .user{display:flex;align-items:center;gap:10px;margin-top:10px}
+.testimonial img{border-radius:50%}
+.community{padding:60px;text-align:center;background:#e6f7f8}
+.join-form{margin-top:20px;display:inline-flex;border-radius:50px;overflow:hidden;background:white}
+.join-form input{border:none;padding:10px 15px;width:250px}
+.join-form button{background:#419aa2;color:white;border:none;padding:10px 25px;cursor:pointer;transition:background .3s}
+.join-form button:hover{background:#357d84}
+.footer{background:#fff;color:#555;padding:50px 80px}
+.footer-cols{display:flex;justify-content:space-between;flex-wrap:wrap}
+.footer-cols a{color:#555;text-decoration:none;transition:color .3s}
+.footer-cols a:hover{color:#419aa2}
+.footer-copy{text-align:center;margin-top:40px;font-size:14px;color:#888}
