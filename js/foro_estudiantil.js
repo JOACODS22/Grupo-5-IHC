@@ -1,9 +1,9 @@
-// Cargar comentarios guardados en localStorage
+//Cargar comentarios guardados en localStorage, aca si necesite ayuda profe
 document.addEventListener("DOMContentLoaded", () => {
     mostrarComentarios();
 });
 
-// Guardar en localStorage
+//Guardar en localStorage, aca si necesite ayuda profe
 function guardarComentario(nombre, ubicacion, texto) {
     const nuevoComentario = {
         nombre,
@@ -19,7 +19,7 @@ function guardarComentario(nombre, ubicacion, texto) {
     localStorage.setItem("foroComentarios", JSON.stringify(comentarios));
 }
 
-// Mostrar comentarios en pantalla
+//Función para mostrar comentarios
 function mostrarComentarios() {
     const contenedor = document.getElementById("lista-comentarios");
     contenedor.innerHTML = "";
@@ -45,13 +45,12 @@ function mostrarComentarios() {
     });
 }
 
-// Manejar botón de publicar
 document.getElementById("btn-publicar").addEventListener("click", () => {
     const nombre = document.getElementById("nombre").value.trim();
     const ubicacion = document.getElementById("ubicacion").value.trim();
     const comentario = document.getElementById("comentario").value.trim();
 
-    if (!nombre || !edad || !comentario) {
+    if (!nombre || !ubicacion || !comentario) {
         alert("Por favor completa todos los campos.");
         return;
     }
