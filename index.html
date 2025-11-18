@@ -1,142 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
- 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encuentra la zona ideal para vivir con ViviEstu. Compara zonas, costos y reseñas verificadas para estudiantes.">
   <title>ViviEstu</title>
   <link rel="stylesheet" href="css/styles.css">
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2TZ4D96F5"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-V2TZ4D96F5');
-</script>
 </head>
+
 <body>
 
-  <!-- End Google Tag Manager (noscript) -->
-  <nav class="navbar">
-    <div class="logo">
-      <a href="index.html">
-        <img src="asset/Logo.png" alt="Logo ViviEstu">
-      </a>
-    </div>
-    <ul>
-      <li><a href="page/mapa_seguridad.html">Zonas</a></li>
-      <li><a href="page/mapa_seguridad.html">Comparador</a></li>
-      <li><a href="page/foro_estudiantil.html">Comunidad</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-    <div class="nav-buttons">
-      <button class="btn-login" onclick="window.location.href='page/iniciar_sesion.html'">Iniciar Sesión</button>
-      <button class="btn-register" onclick="window.location.href='page/registrar.html'">Registrarse</button>
-    </div>
-  </nav>
+<nav class="navbar">
+  <div class="logo">
+    <img src="https://placehold.co/60x60" alt="Logo ViviEstu">
+    <span>ViviEstu</span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Zonas</a></li>
+    <li><a href="#">Comparador</a></li>
+    <li><a href="#">Comunidad</a></li>
+    <li><a href="#">Contacto</a></li>
+
+    <li class="mobile-only"><button class="btn-login" id="btnLogin">Iniciar Sesión</button></li>
+    <li class="mobile-only"><button class="btn-register" id="btnRegister">Registrarse</button></li>
+  </ul>
+
+  <div class="nav-buttons desktop-only">
+    <span id="saludoUsuario" style="display:none; color:#fff; margin-right:15px; font-weight:600;"></span>
+
+    <button class="btn-login" id="btnLoginDesktop">Iniciar Sesión</button>
+    <button class="btn-register" id="btnRegisterDesktop">Registrarse</button>
+
+    <button id="btnCerrarSesion" style="display:none;">Cerrar sesión</button>
+  </div>
+
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+</nav>
 
   <section class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
       <h1>Encuentra la zona ideal para vivir</h1>
-      <p>Toma decisiones rápidas y seguras con datos verificados.</p>
+      <p>Descubre dónde vivir mejor con datos claros y reales.</p>
       <form class="search-bar">
-        <input type="text" placeholder="Ingresa ubicaciones o características">
+        <input type="text" placeholder="Ingresa una zona o característica">
         <button type="submit">Buscar</button>
       </form>
     </div>
   </section>
 
-  <section class="main-content">
-    <h2>¿Cómo te ayuda ViviEstu?</h2>
-    <div class="features">
-      <div class="card" onclick="window.location.href='page/mapa_seguridad.html'" style="cursor: pointer;">
-        <img src="https://placehold.co/100x100" alt="">
-        <h3>Compara zonas</h3>
-        <p>Precio, seguridad y transporte</p>
-      </div>
-      <div class="card">
-        <img src="https://placehold.co/100x100" alt="">
-        <h3>Simula tu costo mensual</h3>
-        <p>Alquiler + transporte</p>
-      </div>
-      <div class="card" onclick="window.location.href='page/mapa_seguridad.html'" style="cursor: pointer;">
-        <img src="https://placehold.co/100x100" alt="">
-        <h3>Simula mapas</h3>
-        <p>Con reseñas verificadas</p>
-      </div>
-    </div>
-  </section>
+  <main>
+    <section class="main-content">
+      <h2>¿Cómo te ayuda ViviEstu?</h2>
+      <div class="features">
+        <div class="card">
+          <img src="https://placehold.co/100x100" alt="Comparar zonas">
+          <h3>Compara zonas</h3>
+          <p>Analiza precios, seguridad y transporte antes de decidir.</p>
+        </div>
 
-  <section class="recommendations">
-    <h2>Viviendas Destacadas</h2>
-    <div class="property-grid">
-      <div class="property">
-        <img src="https://placehold.co/300x200" alt="">
-        <h3>San Borja – Zona Residencial Segura</h3>
-        <p>Venta desde S/ 1 180 000</p>
-      </div>
-      <div class="property">
-        <img src="https://placehold.co/300x200" alt="">
-        <h3>Surco – Cerca a Universidades</h3>
-        <p>Venta desde S/ 843 150</p>
-      </div>
-      <div class="property">
-        <img src="https://placehold.co/300x200" alt="">
-        <h3>San Isidro – Zona Premium Segura</h3>
-        <p>Venta desde S/ 546 460</p>
-      </div>
-    </div>
-  </section>
+        <div class="card">
+          <img src="https://placehold.co/100x100" alt="Simula costos">
+          <h3>Simula tu costo mensual</h3>
+          <p>Calcula alquiler, transporte y gastos básicos.</p>
+        </div>
 
-  <section class="testimonials">
-    <h2>Lo Que Dicen Otros Estudiantes</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial">
-        <p>“Gracias a ViviEstu encontré una vivienda segura y económica cerca de mi universidad.”</p>
-        <div class="user">
-          <img src="https://placehold.co/60x60" alt="">
-          <div>
-            <strong>Carla Ramos</strong><br>
-            <small>Estudiante de Arquitectura</small>
+        <div class="card">
+          <img src="https://placehold.co/100x100" alt="Mapas con reseñas">
+          <h3>Simula mapas</h3>
+          <p>Explora reseñas y opiniones verificadas de estudiantes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="recommendations">
+      <h2>Viviendas Destacadas</h2>
+      <div class="property-grid">
+        <div class="property">
+          <img src="https://placehold.co/300x200" alt="Vivienda en San Borja">
+          <h3>San Borja – Zona Residencial Segura</h3>
+          <p>Desde S/ 1 180 000</p>
+        </div>
+
+        <div class="property">
+          <img src="https://placehold.co/300x200" alt="Vivienda en Surco">
+          <h3>Surco – Cerca a Universidades</h3>
+          <p>Desde S/ 843 150</p>
+        </div>
+
+        <div class="property">
+          <img src="https://placehold.co/300x200" alt="Vivienda en San Isidro">
+          <h3>San Isidro – Zona Premium Segura</h3>
+          <p>Desde S/ 546 460</p>
+        </div>
+      </div>
+
+      <a href="catalogo.html" class="btn-catalogo">Ver catálogo</a>
+      
+    </section>
+
+    <section class="testimonials">
+      <h2>Lo que dicen otros estudiantes</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <p>“Gracias a ViviEstu encontré una vivienda segura y económica cerca de mi universidad.”</p>
+          <div class="user">
+            <img src="https://placehold.co/60x60" alt="Foto de Carla Ramos">
+            <div>
+              <strong>Carla Ramos</strong><br>
+              <small>Estudiante de Arquitectura</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <p>“El comparador de zonas fue clave para encontrar el lugar ideal.”</p>
+          <div class="user">
+            <img src="https://placehold.co/60x60" alt="Foto de Lucía Huamán">
+            <div>
+              <strong>Lucía Huamán</strong><br>
+              <small>Estudiante de Administración</small>
+            </div>
           </div>
         </div>
       </div>
-      <div class="testimonial">
-        <p>“El comparador de zonas fue muy útil para encontrar el lugar ideal.”</p>
-        <div class="user">
-          <img src="https://placehold.co/60x60" alt="">
-          <div>
-            <strong>Lucía Huamán</strong><br>
-            <small>Estudiante de Administración</small>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="community">
-    <h2>Sé Parte De ViviEstu</h2>
-    <form class="join-form">
-      <input type="email" placeholder="Tu correo institucional aquí">
-      <button>Unirme a ViviEstu</button>
-    </form>
-  </section>
+    <section class="community">
+      <h2>Únete a ViviEstu</h2>
+      <p>Recibe consejos y datos exclusivos sobre las mejores zonas para vivir.</p>
+      <form class="join-form">
+        <input type="email" placeholder="Tu correo institucional aquí">
+        <button>Unirme</button>
+      </form>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="footer-cols">
-      <div>
+      <div class="footer-col">
         <h3>Explorar</h3>
         <ul>
           <li><a href="#">Zonas Cercanas</a></li>
-          <li><a href="page/mapa_seguridad.html">Comparador</a></li>
+          <li><a href="#">Comparador</a></li>
           <li><a href="#">Viviendas</a></li>
-          <li><a href="page/perfil_usuario.html">Ver mi perfil</a></li>
         </ul>
       </div>
-      <div>
+
+      <div class="footer-col">
         <h3>Sobre Nosotros</h3>
         <ul>
           <li><a href="#">Quiénes Somos</a></li>
@@ -144,12 +157,64 @@
           <li><a href="#">Equipo</a></li>
         </ul>
       </div>
-      <div>
+
+      <div class="footer-col">
         <h3>Contacto</h3>
-        <p>Lima Metropolitana, Perú<br>(01) 345-9823<br>contacto@viviestu.pe</p>
+        <p>
+          Lima Metropolitana, Perú<br>
+          (01) 345-9823<br>
+          contacto@viviestu.pe
+        </p>
       </div>
     </div>
     <p class="footer-copy">© 2025 ViviEstu. Todos los derechos reservados.</p>
   </footer>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  const saludo = document.getElementById("saludoUsuario");
+  const btnCerrar = document.getElementById("btnCerrarSesion");
+
+  const btnLogin = document.getElementById("btnLogin");
+  const btnRegister = document.getElementById("btnRegister");
+  const btnLoginDesk = document.getElementById("btnLoginDesktop");
+  const btnRegisterDesk = document.getElementById("btnRegisterDesktop");
+
+  btnLogin.onclick = () => window.location.href = "html/iniciar_sesion.html";
+  btnRegister.onclick = () => window.location.href = "html/registrar.html";
+  btnLoginDesk.onclick = () => window.location.href = "html/iniciar_sesion.html";
+  btnRegisterDesk.onclick = () => window.location.href = "html/registrar.html";
+
+  const usuario = JSON.parse(localStorage.getItem("usuario"));
+  const sesionActiva = localStorage.getItem("sesionActiva");
+
+  if (usuario && sesionActiva === "true") {
+    saludo.style.display = "inline";
+    saludo.textContent = `Hola, ${usuario.nombre}`;
+    btnCerrar.style.display = "inline-block";
+
+    btnLogin.style.display = "none";
+    btnRegister.style.display = "none";
+    btnLoginDesk.style.display = "none";
+    btnRegisterDesk.style.display = "none";
+
+  } else {
+    saludo.style.display = "none";
+    btnCerrar.style.display = "none";
+  }
+
+  btnCerrar.addEventListener("click", () => {
+    localStorage.removeItem("sesionActiva");
+    localStorage.removeItem("usuarioActivo");
+    window.location.reload();
+  });
+</script>
+
 </body>
 </html>
