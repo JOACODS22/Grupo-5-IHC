@@ -29,25 +29,21 @@
         <button type="submit">Registrarse</button>
       </form>
 
+      <p id="mensajeRegistro" style="color:green; display:none; margin-top:10px;">
+        ¡Registro exitoso! Ahora puedes iniciar sesión.
+      </p>
+
       <div class="additional-options" style="margin-top: 20px; text-align: center;">
-        <p style="color: #12213a; font-size: 13px;">¿Ya tienes cuenta? <a href="iniciar_sesion.html" style="color: #0d0d20; text-decoration: underline;">Inicia sesión</a></p>
+        <p style="color: #12213a; font-size: 13px;">¿Ya tienes cuenta? 
+          <a href="iniciar_sesion.html" style="color: #0d0d20; text-decoration: underline;">
+            Inicia sesión
+          </a>
+        </p>
       </div>
     </div>
   </div>
 
-  <script>
-    document.getElementById('registerForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-      const nombre = document.getElementById('nombre').value;
-      const celular = document.getElementById('celular').value;
-
-      if (email && password && nombre && celular) {
-        window.location.href = '../index.html';
-      }
-    });
-  </script>
+  <script src="registrar.js"></script>
 
 </body>
 </html>
