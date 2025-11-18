@@ -27,6 +27,10 @@
         <button type="submit">Iniciar Sesión</button>
       </form>
 
+      <p id="mensajeError" style="color:red; margin-top:10px; display:none;">
+        Correo o contraseña incorrectos.
+      </p>
+
       <div class="additional-options">
         <a href="#" class="link-option">¿Olvidaste tu contraseña?</a>
         <div class="separator">
@@ -37,18 +41,7 @@
     </div>
   </div>
 
-  <script>
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-
-      if (email && password) {
-        window.location.href = '../index.html';
-      }
-    });
-  </script>
+  <script src="iniciar_sesion.js"></script>
 
 </body>
 </html>
-
