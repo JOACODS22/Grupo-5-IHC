@@ -454,6 +454,168 @@ body {
     color: #888;
 }
 
+/* ===============================
+   ESTILOS PARA RESERVAS INTERACTIVAS
+=============================== */
+
+/* Inputs de reserva */
+.input-reserva {
+    margin-top: 15px;
+    padding: 12px 15px;
+    border: 2px solid #007c91;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    max-width: 250px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.input-reserva:focus {
+    outline: none;
+    border-color: #e3a13b;
+    box-shadow: 0 0 8px rgba(227, 161, 59, 0.3);
+}
+
+/* Checkbox container */
+.checkbox-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #f0f8f9;
+    border-radius: 8px;
+    border: 2px solid #007c91;
+}
+
+.input-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #007c91;
+}
+
+.checkbox-container label {
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Título de reservas */
+.titulo-reservas {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000000;
+    margin: 60px 0 30px 0;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #007c91;
+}
+
+/* Lista de reservas */
+.reservas-lista {
+    max-width: 1400px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Reserva confirmada */
+.reserva-confirmada {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #28a745;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease;
+}
+
+.reserva-confirmada:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Header de reserva */
+.reserva-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.reserva-header h3 {
+    font-size: 24px;
+    color: #28a745;
+    margin: 0;
+}
+
+/* Botón eliminar reserva */
+.btn-eliminar-reserva {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.btn-eliminar-reserva:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Info de reserva */
+.reserva-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.reserva-info p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reserva-info i {
+    color: #007c91;
+    font-size: 18px;
+    width: 25px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .container {
