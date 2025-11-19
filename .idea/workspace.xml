@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9deb8e85-4829-430b-b9c9-37f5a149f52d" name="Changes" comment="mejora de estilos para botones de login y registro en varias hojas de estilo">
-      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/iniciar_sesion.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/iniciar_sesion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/registrar.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/registrar.js" afterDir="false" />
+    <list default="true" id="9deb8e85-4829-430b-b9c9-37f5a149f52d" name="Changes" comment="mejoras en el manejo de inicio de sesión y registro">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/iniciar_sesion.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/iniciar_sesion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/registrar.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/registrar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/iniciar_sesion.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/iniciar_sesion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/registrar.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/registrar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +122,7 @@
       <workItem from="1762301962017" duration="3325000" />
       <workItem from="1763512801480" duration="5951000" />
       <workItem from="1763519097465" duration="1124000" />
-      <workItem from="1763565131378" duration="1019000" />
+      <workItem from="1763565131378" duration="1645000" />
     </task>
     <task id="LOCAL-00001" summary="se añadio la pagina de confirmacion de reservas">
       <option name="closed" value="true" />
@@ -178,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763565463621</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="mejoras en el manejo de inicio de sesión y registro">
+      <option name="closed" value="true" />
+      <created>1763566398263</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1763566398263</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +212,7 @@
     <MESSAGE value="corrección de contenido duplicado en agendar_visita.html" />
     <MESSAGE value="implementación del sistema de reservas interactivo con botones funcionales para fecha, hora y notificaciones" />
     <MESSAGE value="mejora de estilos para botones de login y registro en varias hojas de estilo" />
-    <option name="LAST_COMMIT_MESSAGE" value="mejora de estilos para botones de login y registro en varias hojas de estilo" />
+    <MESSAGE value="mejoras en el manejo de inicio de sesión y registro" />
+    <option name="LAST_COMMIT_MESSAGE" value="mejoras en el manejo de inicio de sesión y registro" />
   </component>
 </project>

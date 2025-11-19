@@ -2,73 +2,164 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 body {
-  background-color: #e5e5e5;
   font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+/* Overlay de fondo oscuro */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+  cursor: pointer;
+}
+
+/* Contenedor del modal centrado */
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 450px;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 1001;
+  animation: slideIn 0.3s ease;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Personalizar scrollbar del modal */
+.modal-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.modal-container::-webkit-scrollbar-thumb {
+  background: #e3a13b;
+  border-radius: 10px;
+}
+
+.modal-container::-webkit-scrollbar-thumb:hover {
+  background: #d69332;
+}
+
+/* Botón de cerrar */
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10;
+  color: #333;
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 100%;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal:hover {
+  background: #ff6b6b;
+  color: white;
+  transform: rotate(90deg);
 }
 
 .form-container {
   width: 100%;
   background-color: #b7d3d5;
   overflow: hidden;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  border-radius: 20px;
 }
 
 .header {
   background-color: #e3a13b;
   text-align: center;
-  padding: 30% 0;
+  padding: 40px 0 60px;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 65%, 50% 100%, 0 65%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
 }
 
 .header .logo {
-  max-width: 100%;
-}
-
-.header .logo a {
-  display: inline-block;
-  cursor: pointer;
+  max-width: 150px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .header .logo img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .form-content {
-  padding: 5% 5%;
+  padding: 30px 40px 40px;
   text-align: center;
 }
 
 .form-content h1 {
   color: #12213a;
-  font-size: 20px;
-  margin-bottom: 5%;
+  font-size: 24px;
+  margin-bottom: 25px;
+  font-weight: 600;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 input {
   border: none;
-  border-bottom: 1px solid #333;
+  border-bottom: 2px solid #6b7b7c;
   background-color: transparent;
-  padding: 1% 0;
+  padding: 12px 0;
   font-size: 14px;
   color: #000;
+  transition: border-color 0.3s ease;
 }
 
 input::placeholder {
@@ -77,22 +168,26 @@ input::placeholder {
 
 input:focus {
   outline: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid #0d0d20;
 }
 
 button[type="submit"] {
   background-color: #0d0d20;
   color: #fff;
   border: none;
-  padding: 1.3%;
-  border-radius: 6px;
+  padding: 14px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 600;
   margin-top: 10px;
+  transition: all 0.3s ease;
 }
 
 button[type="submit"]:hover {
   background-color: #222244;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 13, 32, 0.3);
 }
 
 .additional-options {
@@ -138,9 +233,30 @@ button[type="submit"]:hover {
   font-weight: bold;
   cursor: pointer;
   display: inline-block;
+  transition: all 0.3s ease;
 }
 
 .link-register:hover {
   background-color: #d69332;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(227, 161, 59, 0.3);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .modal-container {
+    width: 95%;
+    max-width: 100%;
+  }
+
+  .form-content {
+    padding: 25px 30px 35px;
+  }
+
+  .close-modal {
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+  }
 }
 

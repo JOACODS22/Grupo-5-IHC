@@ -8,37 +8,44 @@
 </head>
 <body>
 
-  <div class="form-container">
-    <div class="header">
-      <div class="logo">
-        <a href="../index.html">
+  <!-- Overlay de fondo oscuro -->
+  <div class="modal-overlay" onclick="window.location.href='../index.html'"></div>
+
+  <!-- Modal contenedor -->
+  <div class="modal-container">
+    <!-- Botón de cerrar -->
+    <button class="close-modal" onclick="window.location.href='../index.html'" title="Cerrar">×</button>
+
+    <div class="form-container">
+      <div class="header">
+        <div class="logo">
           <img src="../asset/Logo.png" alt="Logo ViviEstu">
-        </a>
+        </div>
       </div>
-    </div>
 
-    <div class="form-content">
-      <h1>Únete a nosotros</h1>
+      <div class="form-content">
+        <h1>Únete a nosotros</h1>
 
-      <form id="registerForm">
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="password" id="password" placeholder="Contraseña" required>
-        <input type="text" id="nombre" placeholder="Nombres" required>
-        <input type="tel" id="celular" placeholder="Celular" required>
+        <form id="registerForm">
+          <input type="email" id="email" placeholder="Email" required>
+          <input type="password" id="password" placeholder="Contraseña" required>
+          <input type="text" id="nombre" placeholder="Nombres" required>
+          <input type="tel" id="celular" placeholder="Celular" required>
 
-        <button type="submit">Registrarse</button>
-      </form>
+          <button type="submit">Registrarse</button>
+        </form>
 
-      <p id="mensajeRegistro" style="color:green; display:none; margin-top:10px;">
-        ¡Registro exitoso! Ahora puedes iniciar sesión.
-      </p>
-
-      <div class="additional-options" style="margin-top: 20px; text-align: center;">
-        <p style="color: #12213a; font-size: 13px;">¿Ya tienes cuenta? 
-          <a href="iniciar_sesion.html" style="color: #0d0d20; text-decoration: underline;">
-            Inicia sesión
-          </a>
+        <p id="mensajeRegistro" style="color:green; display:none; margin-top:10px;">
+          ¡Registro exitoso! Ahora puedes iniciar sesión.
         </p>
+
+        <div class="additional-options" style="margin-top: 20px; text-align: center;">
+          <p style="color: #12213a; font-size: 13px;">¿Ya tienes cuenta?
+            <a href="iniciar_sesion.html" style="color: #0d0d20; text-decoration: underline;">
+              Inicia sesión
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   </div>

@@ -8,35 +8,42 @@
 </head>
 <body>
 
-  <div class="form-container">
-    <div class="header">
-      <div class="logo">
-        <a href="../index.html">
+  <!-- Overlay de fondo oscuro -->
+  <div class="modal-overlay" onclick="window.location.href='../index.html'"></div>
+
+  <!-- Modal contenedor -->
+  <div class="modal-container">
+    <!-- Botón de cerrar -->
+    <button class="close-modal" onclick="window.location.href='../index.html'" title="Cerrar">×</button>
+
+    <div class="form-container">
+      <div class="header">
+        <div class="logo">
           <img src="../asset/Logo.png" alt="Logo ViviEstu">
-        </a>
-      </div>
-    </div>
-
-    <div class="form-content">
-      <h1>Bienvenido de vuelta</h1>
-
-      <form id="loginForm">
-        <input type="email" id="email" placeholder="Correo electrónico" required>
-        <input type="password" id="password" placeholder="Contraseña" required>
-
-        <button type="submit">Iniciar Sesión</button>
-      </form>
-
-      <p id="mensajeError" style="color:red; margin-top:10px; display:none;">
-        Correo o contraseña incorrectos.
-      </p>
-
-      <div class="additional-options">
-        <a href="#" class="link-option">¿Olvidaste tu contraseña?</a>
-        <div class="separator">
-          <span>o</span>
         </div>
-        <a href="registrar.html" class="link-register">Crear una cuenta</a>
+      </div>
+
+      <div class="form-content">
+        <h1>Bienvenido de vuelta</h1>
+
+        <form id="loginForm">
+          <input type="email" id="email" placeholder="Correo electrónico" required>
+          <input type="password" id="password" placeholder="Contraseña" required>
+
+          <button type="submit">Iniciar Sesión</button>
+        </form>
+
+        <p id="mensajeError" style="color:red; margin-top:10px; display:none;">
+          Correo o contraseña incorrectos.
+        </p>
+
+        <div class="additional-options">
+          <a href="#" class="link-option">¿Olvidaste tu contraseña?</a>
+          <div class="separator">
+            <span>o</span>
+          </div>
+          <a href="registrar.html" class="link-register">Crear una cuenta</a>
+        </div>
       </div>
     </div>
   </div>
