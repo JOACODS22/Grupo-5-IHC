@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9deb8e85-4829-430b-b9c9-37f5a149f52d" name="Changes" comment="implementación de la funcionalidad para editar el nombre de usuario con modal y persistencia en localStorage">
-      <change afterPath="$PROJECT_DIR$/EDITAR_NOMBRE_README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/perfil_usuario.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/perfil_usuario.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/perfil_usuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/perfil_usuario.html" afterDir="false" />
-    </list>
+    <list default="true" id="9deb8e85-4829-430b-b9c9-37f5a149f52d" name="Changes" comment="Enhance card links and improve responsive design for navigation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,11 +21,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -39,22 +32,22 @@
     &quot;assignee&quot;: &quot;jotabe12&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/JOACODS22/Grupo-5-IHC.git&quot;,
-    &quot;accountId&quot;: &quot;6dfe1ef5-b3ec-49aa-a828-a5bddac11f57&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/jotabe12/ihc_live_web.git",
+    "accountId": "6dfe1ef5-b3ec-49aa-a828-a5bddac11f57"
   },
-  &quot;recentNewPullRequestHead&quot;: {
-    &quot;server&quot;: {
-      &quot;useHttp&quot;: false,
-      &quot;host&quot;: &quot;github.com&quot;,
-      &quot;port&quot;: null,
-      &quot;suffix&quot;: null
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
     },
-    &quot;owner&quot;: &quot;JOACODS22&quot;,
-    &quot;repository&quot;: &quot;Grupo-5-IHC&quot;
+    "owner": "JOACODS22",
+    "repository": "Grupo-5-IHC"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -66,31 +59,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.agendar_visita.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.catalogo.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.foro_estudiantil.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.mapa_seguridad.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.perfil_usuario.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.registrar.html.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.web.browsers&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.agendar_visita.html.executor": "Debug",
+    "JavaScript Debug.catalogo.html.executor": "Debug",
+    "JavaScript Debug.foro_estudiantil.html.executor": "Debug",
+    "JavaScript Debug.index.html.executor": "Debug",
+    "JavaScript Debug.mapa_seguridad.html.executor": "Debug",
+    "JavaScript Debug.perfil_usuario.html.executor": "Debug",
+    "JavaScript Debug.registrar.html.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="registrar.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ihc_public/page/registrar.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -123,7 +116,9 @@
       <workItem from="1763512801480" duration="5951000" />
       <workItem from="1763519097465" duration="1124000" />
       <workItem from="1763565131378" duration="1892000" />
-      <workItem from="1763571438705" duration="1910000" />
+      <workItem from="1763571438705" duration="2010000" />
+      <workItem from="1763573568248" duration="19000" />
+      <workItem from="1763573624026" duration="922000" />
     </task>
     <task id="LOCAL-00001" summary="se añadio la pagina de confirmacion de reservas">
       <option name="closed" value="true" />
@@ -205,7 +200,31 @@
       <option name="project" value="LOCAL" />
       <updated>1763572117519</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="implementación de la funcionalidad para editar el nombre de usuario con modal y persistencia en localStorage">
+      <option name="closed" value="true" />
+      <created>1763573393947</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1763573393947</updated>
+    </task>
+    <task id="LOCAL-00012" summary="live web v0.2">
+      <option name="closed" value="true" />
+      <created>1763573686318</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1763573686318</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Enhance card links and improve responsive design for navigation">
+      <option name="closed" value="true" />
+      <created>1763574509998</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1763574509998</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +252,8 @@
     <MESSAGE value="mejoras en el diseño y funcionalidad de los formularios de inicio de sesión y registro" />
     <MESSAGE value="mejoras en el diseño del contenedor principal y ajustes de estilo en varios componentes" />
     <MESSAGE value="implementación de la funcionalidad para editar el nombre de usuario con modal y persistencia en localStorage" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementación de la funcionalidad para editar el nombre de usuario con modal y persistencia en localStorage" />
+    <MESSAGE value="live web v0.2" />
+    <MESSAGE value="Enhance card links and improve responsive design for navigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance card links and improve responsive design for navigation" />
   </component>
 </project>
