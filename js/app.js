@@ -40,6 +40,28 @@ const SessionManager = {
             alert("Debes iniciar sesión para acceder a esta página");
             window.location.href = this.getBasePath() + "page/iniciar_sesion.html";
         }
+    },
+
+    // Actualizar nombre del usuario
+    updateUserName: function(nuevoNombre) {
+        const usuarioActivoEmail = localStorage.getItem("usuarioActivo");
+        if (!usuarioActivoEmail) return false;
+
+        // Obtener todos los usuarios
+        const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+        // Encontrar el índice del usuario activo
+        const indexUsuario = usuarios.findIndex(user => user.email === usuarioActivoEmail);
+
+        if (indexUsuario === -1) return false;
+
+        // Actualizar el nombre
+        usuarios[indexUsuario].nombre = nuevoNombre;
+
+        // Guardar en localStorage
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+        return true;
     }
 };
 
@@ -55,7 +77,6 @@ const HeaderManager = {
         const basePath = SessionManager.getBasePath();
 
         // Buscar elementos del header (compatibilidad con diferentes estructuras)
-        const navButtons = document.querySelector('.nav-buttons');
         const btnLogin = document.getElementById('btnLogin');
         const btnRegister = document.getElementById('btnRegister');
         const btnLoginDesk = document.getElementById('btnLoginDesktop');

@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9deb8e85-4829-430b-b9c9-37f5a149f52d" name="Changes" comment="">
+    <list default="true" id="9deb8e85-4829-430b-b9c9-37f5a149f52d" name="Changes" comment="implementación de la funcionalidad para editar el nombre de usuario con modal y persistencia en localStorage">
+      <change afterPath="$PROJECT_DIR$/EDITAR_NOMBRE_README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/perfil_usuario.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/perfil_usuario.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/perfil_usuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/perfil_usuario.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +123,7 @@
       <workItem from="1763512801480" duration="5951000" />
       <workItem from="1763519097465" duration="1124000" />
       <workItem from="1763565131378" duration="1892000" />
-      <workItem from="1763571438705" duration="650000" />
+      <workItem from="1763571438705" duration="1910000" />
     </task>
     <task id="LOCAL-00001" summary="se añadio la pagina de confirmacion de reservas">
       <option name="closed" value="true" />
@@ -194,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763567037027</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="mejoras en el diseño del contenedor principal y ajustes de estilo en varios componentes">
+      <option name="closed" value="true" />
+      <created>1763572117519</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1763572117519</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +231,8 @@
     <MESSAGE value="mejora de estilos para botones de login y registro en varias hojas de estilo" />
     <MESSAGE value="mejoras en el manejo de inicio de sesión y registro" />
     <MESSAGE value="mejoras en el diseño y funcionalidad de los formularios de inicio de sesión y registro" />
-    <option name="LAST_COMMIT_MESSAGE" value="mejoras en el diseño y funcionalidad de los formularios de inicio de sesión y registro" />
+    <MESSAGE value="mejoras en el diseño del contenedor principal y ajustes de estilo en varios componentes" />
+    <MESSAGE value="implementación de la funcionalidad para editar el nombre de usuario con modal y persistencia en localStorage" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementación de la funcionalidad para editar el nombre de usuario con modal y persistencia en localStorage" />
   </component>
 </project>

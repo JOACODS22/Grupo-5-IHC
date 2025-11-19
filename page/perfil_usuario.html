@@ -43,8 +43,27 @@
             </div>
             <h2 class="profile-name" id="profileName">Nombre Completo</h2>
             <div class="profile-buttons">
-                <button class="btn-profile" onclick="alert('Funcionalidad de editar perfil próximamente')">Editar perfil</button>
+                <button class="btn-profile" id="btnEditarPerfil">Editar perfil</button>
                 <button class="btn-profile" onclick="alert('Funcionalidad de subir foto próximamente')">Subir foto</button>
+            </div>
+        </div>
+
+        <!-- Modal para editar nombre -->
+        <div id="modalEditarNombre" class="modal-editar">
+            <div class="modal-editar-content">
+                <span class="modal-close">&times;</span>
+                <h2>Editar Nombre de Usuario</h2>
+                <form id="formEditarNombre">
+                    <div class="form-group">
+                        <label for="nuevoNombre">Nuevo nombre:</label>
+                        <input type="text" id="nuevoNombre" placeholder="Ingresa tu nuevo nombre" required>
+                    </div>
+                    <p id="mensajeErrorEdicion" class="mensaje-error"></p>
+                    <div class="modal-buttons">
+                        <button type="button" class="btn-cancelar" id="btnCancelar">Cancelar</button>
+                        <button type="submit" class="btn-guardar">Guardar</button>
+                    </div>
+                </form>
             </div>
         </div>
 
@@ -141,6 +160,86 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('greetingName').textContent = user.nombre;
         document.getElementById('profileName').textContent = user.nombre;
     }
+
+    // ==========================================
+    // MODAL EDITAR NOMBRE
+    // ==========================================
+    const modal = document.getElementById('modalEditarNombre');
+    const btnEditar = document.getElementById('btnEditarPerfil');
+    const btnCerrar = document.querySelector('.modal-close');
+    const btnCancelar = document.getElementById('btnCancelar');
+    const formEditar = document.getElementById('formEditarNombre');
+    const inputNuevoNombre = document.getElementById('nuevoNombre');
+    const mensajeError = document.getElementById('mensajeErrorEdicion');
+
+    // Abrir modal
+    btnEditar.addEventListener('click', function() {
+        if (user) {
+            inputNuevoNombre.value = user.nombre; // Pre-llenar con el nombre actual
+            mensajeError.textContent = '';
+            mensajeError.style.display = 'none';
+            modal.style.display = 'block';
+        }
+    });
+
+    // Cerrar modal con X
+    btnCerrar.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    // Cerrar modal con botón Cancelar
+    btnCancelar.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    // Cerrar modal al hacer clic fuera de él
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Manejar envío del formulario
+    formEditar.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const nuevoNombre = inputNuevoNombre.value.trim();
+
+        // Validar que el nombre no esté vacío
+        if (!nuevoNombre) {
+            mensajeError.textContent = 'El nombre no puede estar vacío';
+            mensajeError.style.display = 'block';
+            return;
+        }
+
+        // Validar longitud mínima
+        if (nuevoNombre.length < 2) {
+            mensajeError.textContent = 'El nombre debe tener al menos 2 caracteres';
+            mensajeError.style.display = 'block';
+            return;
+        }
+
+        // Actualizar el nombre del usuario
+        const actualizado = SessionManager.updateUserName(nuevoNombre);
+
+        if (actualizado) {
+            // Actualizar la interfaz
+            document.getElementById('greetingName').textContent = nuevoNombre;
+            document.getElementById('profileName').textContent = nuevoNombre;
+
+            // Actualizar el header (nombre en dropdown)
+            HeaderManager.updateHeader();
+
+            // Cerrar modal
+            modal.style.display = 'none';
+
+            // Mostrar mensaje de éxito
+            alert('¡Nombre actualizado exitosamente!');
+        } else {
+            mensajeError.textContent = 'Error al actualizar el nombre';
+            mensajeError.style.display = 'block';
+        }
+    });
 });
 </script>
 </body>
