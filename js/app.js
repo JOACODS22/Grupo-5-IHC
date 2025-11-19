@@ -5,8 +5,15 @@
 const SessionManager = {
     // Obtener usuario actual
     getUser: function() {
-        const usuario = localStorage.getItem("usuario");
-        return usuario ? JSON.parse(usuario) : null;
+        const usuarioActivoEmail = localStorage.getItem("usuarioActivo");
+        if (!usuarioActivoEmail) return null;
+
+        // Obtener todos los usuarios
+        const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+        // Buscar el usuario activo por email
+        const usuario = usuarios.find(user => user.email === usuarioActivoEmail);
+        return usuario || null;
     },
 
     // Verificar si hay sesión activa

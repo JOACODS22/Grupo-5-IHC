@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9deb8e85-4829-430b-b9c9-37f5a149f52d" name="Changes" comment="implementación del sistema de reservas interactivo con botones funcionales para fecha, hora y notificaciones">
-      <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_11_2025_09_26_p__m___Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/agendar_visita.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/agendar_visita.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/foro_estudiantil.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/foro_estudiantil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/perfil_usuario.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/perfil_usuario.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+    <list default="true" id="9deb8e85-4829-430b-b9c9-37f5a149f52d" name="Changes" comment="mejora de estilos para botones de login y registro en varias hojas de estilo">
+      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/iniciar_sesion.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/iniciar_sesion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/registrar.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/registrar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +120,7 @@
       <workItem from="1762301962017" duration="3325000" />
       <workItem from="1763512801480" duration="5951000" />
       <workItem from="1763519097465" duration="1124000" />
-      <workItem from="1763565131378" duration="315000" />
+      <workItem from="1763565131378" duration="1019000" />
     </task>
     <task id="LOCAL-00001" summary="se añadio la pagina de confirmacion de reservas">
       <option name="closed" value="true" />
@@ -175,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763517256463</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="mejora de estilos para botones de login y registro en varias hojas de estilo">
+      <option name="closed" value="true" />
+      <created>1763565463621</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1763565463621</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +201,7 @@
     <MESSAGE value="mejora del header en todas las paginas" />
     <MESSAGE value="corrección de contenido duplicado en agendar_visita.html" />
     <MESSAGE value="implementación del sistema de reservas interactivo con botones funcionales para fecha, hora y notificaciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementación del sistema de reservas interactivo con botones funcionales para fecha, hora y notificaciones" />
+    <MESSAGE value="mejora de estilos para botones de login y registro en varias hojas de estilo" />
+    <option name="LAST_COMMIT_MESSAGE" value="mejora de estilos para botones de login y registro en varias hojas de estilo" />
   </component>
 </project>
