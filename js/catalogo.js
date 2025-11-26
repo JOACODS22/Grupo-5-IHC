@@ -217,3 +217,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+// ===============================
+//      DESPLAZARSE A PROPIEDAD
+// ===============================
+function scrollToProperty(propertyIndex) {
+  const cards = Array.from(document.querySelectorAll(".property-card"));
+  if (propertyIndex > 0 && propertyIndex <= cards.length) {
+    const targetCard = cards[propertyIndex - 1];
+    targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+}

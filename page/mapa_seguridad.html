@@ -5,92 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa de Seguridad</title>
 
-    <!--aqui va la api-->
+    <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
     <link rel="stylesheet" href="../css/agendar_visita.css">
     <link rel="stylesheet" href="../css/mapa_seguridad.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
-    <header class="header">
-        <div class="logo-container">
-            <a href="../index.html">
-                <img src="../asset/Logo.png" alt="ViviEstu Logo" class="logo">
-            </a>
-        </div>
-        <nav class="nav-menu">
-            <a href="../index.html">Inicio</a>
-            <a href="mapa_seguridad.html">Zonas</a>
-            <a href="catalogo.html">Catálogo</a>
-            <a href="foro_estudiantil.html">Comunidad</a>
-            <a href="agendar_visita.html">Contacto</a>
-        </nav>
-        <div class="nav-buttons">
-            <button class="btn-login" id="btnLoginDesktop">Iniciar Sesión</button>
-            <button class="btn-register" id="btnRegisterDesktop">Registrarse</button>
-        </div>
-    </header>
+<header class="header">
+    <div class="logo-container">
+        <a href="../index.html">
+            <img src="../asset/Logo.png" alt="ViviEstu Logo" class="logo">
+        </a>
+    </div>
 
-    <section class="map-section">
-        <h1>Mapa de Seguridad ViviEstu</h1>
-        <p>Visualiza zonas seguras (verde) y zonas de riesgo (rojo)</p>
+    <nav class="nav-menu">
+        <a href="../index.html">Inicio</a>
+        <a href="mapa_seguridad.html">Zonas</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="foro_estudiantil.html">Comunidad</a>
+        <a href="agendar_visita.html">Contacto</a>
+    </nav>
 
+    <div class="nav-buttons">
+        <button class="btn-login" id="btnLoginDesktop">Iniciar Sesión</button>
+        <button class="btn-register" id="btnRegisterDesktop">Registrarse</button>
+    </div>
+</header>
+
+<section class="map-section">
+    <h1>Mapa de Seguridad ViviEstu</h1>
+    <p>Visualiza zonas seguras (verde) y zonas de riesgo (rojo)</p>
+
+    <div class="map-container">
         <div id="map"></div>
-    </section>
 
-    <footer>
-        © 2025 ViviEstu - Visualización de zonas
-    </footer>
+        <div id="panel-info">
+            <h2>Detalles de la Vivienda</h2>
+            <div id="panel-content">Selecciona un punto del mapa.</div>
+        </div>
+    </div>
+</section>
 
-    <!-- segunda parte de la api -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<footer>
+    © 2025 ViviEstu - Visualización de zonas
+</footer>
 
-    <!-- Session Management -->
-    <script src="../js/app.js"></script>
+<!-- Leaflet -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-    <!-- tercera parte de la api -->
-    <script>
-        // Inicializar mapa
-        const map = L.map('map').setView([-12.06, -77.04], 12); 
-
-        // Capa del mapa real
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '© OpenStreetMap'
-        }).addTo(map);
-
-        const zonasSeguras = [
-            {lat:-12.084, lng:-77.05, nombre:"Zona segura A"},
-            {lat:-12.072, lng:-77.03, nombre:"Zona segura B"},
-            {lat:-12.061, lng:-77.08, nombre:"Zona segura C"},
-        ];
-
-        const zonasPeligrosas = [
-            {lat:-12.09, lng:-77.06, nombre:"Zona peligrosa A"},
-            {lat:-12.05, lng:-77.00, nombre:"Zona peligrosa B"},
-            {lat:-12.04, lng:-77.09, nombre:"Zona peligrosa C"},
-        ];
-
-        zonasSeguras.forEach(z => {
-            L.circleMarker([z.lat, z.lng], {
-                radius: 10,
-                color: "white",
-                fillColor: "#2e7d32",
-                fillOpacity: 0.9
-            }).addTo(map).bindPopup(z.nombre);
-        });
-
-        zonasPeligrosas.forEach(z => {
-            L.circleMarker([z.lat, z.lng], {
-                radius: 10,
-                color: "white",
-                fillColor: "#d32f2f",
-                fillOpacity: 0.9
-            }).addTo(map).bindPopup(z.nombre);
-        });
-    </script>
+<script src="../js/mapa_seguridad.js"></script>
 
 </body>
 </html>
