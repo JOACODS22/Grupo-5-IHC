@@ -4,27 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9deb8e85-4829-430b-b9c9-37f5a149f52d" name="Changes" comment="Implement reservation management with localStorage and enhance user profile reservations display">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="9deb8e85-4829-430b-b9c9-37f5a149f52d" name="Changes" comment="Implement reservation management with localStorage and add review section in user profile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACTUALIZACION_HEADER.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORRECCION_AGENDAR.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORRECCION_BOTONES_AGENDAR.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CORRECCION_INDEX.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EDITAR_NOMBRE_README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FINALIZACION.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PRUEBAS_RAPIDAS.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SISTEMA_RESERVAS.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SISTEMA_SESION_README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TESTING_GUIDE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/agendar_visita.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/agendar_visita.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/foro_estudiantil.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/foro_estudiantil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/perfil_usuario.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/perfil_usuario.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/agendar_visita.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/agendar_visita.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/foro_estudiantil.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/foro_estudiantil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/agendar_visita.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/agendar_visita.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/foro_estudiantil.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/foro_estudiantil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/perfil_usuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/perfil_usuario.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +126,7 @@
       <workItem from="1763573568248" duration="19000" />
       <workItem from="1763573624026" duration="922000" />
       <workItem from="1764726694922" duration="1402000" />
-      <workItem from="1764728119484" duration="405000" />
+      <workItem from="1764728119484" duration="1709000" />
     </task>
     <task id="LOCAL-00001" summary="se añadio la pagina de confirmacion de reservas">
       <option name="closed" value="true" />
@@ -264,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764723775513</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Implement reservation management with localStorage and add review section in user profile">
+      <option name="closed" value="true" />
+      <created>1764728721234</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1764728721234</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +289,8 @@
     <MESSAGE value="Add user profile dropdown and enhance responsive design for navigation" />
     <MESSAGE value="Fix formatting of Google tag script in agendar_visita.html" />
     <MESSAGE value="Implement reservation management with localStorage and enhance user profile reservations display" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement reservation management with localStorage and enhance user profile reservations display" />
+    <MESSAGE value="Implement reservation management with localStorage and add review section to property details" />
+    <MESSAGE value="Implement reservation management with localStorage and add review section in user profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement reservation management with localStorage and add review section in user profile" />
   </component>
 </project>

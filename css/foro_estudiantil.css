@@ -1,3 +1,16 @@
+/* Accessibility - Hidden labels for screen readers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -5,335 +18,341 @@ body {
     color: #333;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 60px;
-    background: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-}
-
-.logo a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #333;
-}
-
-.logo img {
-    height: 60px;
-    width: auto;
-    cursor: pointer;
-    transition: opacity .3s;
-}
-
-.logo img:hover {
-    opacity: .85;
-}
-
-.navbar ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #333;
-    transition: color .3s;
-}
-
-.navbar a:hover {
-    color: #419aa2;
-}
-
-.nav-buttons button {
-    margin-left: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    color: #fff;
-    font-weight: bold;
-    transition: opacity .3s;
-}
-
-.btn-login {
-    background: #f99f1c;
-}
-
-.btn-register {
-    background: #00A7B3;
-}
-
-.nav-buttons button:hover {
-    opacity: .85;
-}
-
+/* FORO CONTAINER */
 .foro-container {
     max-width: 900px;
-    margin: 3rem auto;
-    padding: 1rem;
+    margin: 40px auto;
+    padding: 20px;
 }
 
 .foro-container h1 {
     text-align: center;
-    color: #00A7B3;
-    margin-bottom: 2rem;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 30px;
 }
 
-.comentario {
-    background-color: #ffffff;
-    border-radius: 15px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.comentario .usuario {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.comentario .usuario img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-right: 1rem;
-}
-
-.comentario h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    color: #00A7B3;
-}
-
-.comentario small {
-    color: #888;
-}
-
-.comentario p {
-    margin-top: 0.8rem;
-    line-height: 1.5;
-}
-
+/* FORMULARIO DE COMENTARIO */
 .formulario-comentario {
-    background: #ffffff;
-    padding: 1.5rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    margin-bottom: 2rem;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
 }
 
 .formulario-comentario h2 {
-    color: #00A7B3;
-    margin-bottom: 1rem;
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
 .formulario-comentario input,
-.formulario-comentario textarea {
+.formulario-comentario textarea,
+.formulario-comentario select {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 1rem;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.formulario-comentario input:focus,
+.formulario-comentario textarea:focus,
+.formulario-comentario select:focus {
+    outline: none;
+    border-color: #00a8cc;
+    box-shadow: 0 0 0 3px rgba(0, 168, 204, 0.1);
 }
 
 .formulario-comentario textarea {
-    height: 120px;
-    resize: none;
+    min-height: 120px;
+    resize: vertical;
 }
 
-#btn-publicar {
-    width: 100%;
-    background: #00A7B3;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-#btn-publicar:hover {
-    opacity: .85;
-}
-
-/* Estilos para reseña de vivienda */
+/* CHECKBOX DE RESEÑA */
 .resena-checkbox-container {
-    margin-bottom: 1rem;
+    margin: 20px 0;
 }
 
 .resena-checkbox-container label {
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-size: 0.95rem;
+    font-size: 1em;
+    color: #555;
 }
 
 .resena-checkbox-container input[type="checkbox"] {
     width: auto;
-    margin-right: 8px;
+    margin-right: 10px;
+    margin-bottom: 0;
     cursor: pointer;
+    width: 18px;
+    height: 18px;
 }
 
+/* SECCIÓN DE RESEÑA */
 .resena-section {
-    background: #f0f8f9;
-    padding: 1rem;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    border: 1px solid #d0e8ea;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #00a8cc;
+    margin: 20px 0;
 }
 
 .resena-section label {
     display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+    margin-bottom: 8px;
     color: #333;
+    font-weight: 500;
 }
 
-.resena-section select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    background: white;
-}
-
+/* RATING CONTAINER */
 .rating-container {
-    margin-top: 1rem;
+    margin-top: 20px;
 }
 
 .rating-container label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #333;
 }
 
 .stars {
     display: inline-flex;
-    gap: 5px;
-    font-size: 1.5rem;
-    cursor: pointer;
+    gap: 8px;
+    margin-right: 10px;
 }
 
 .stars i {
+    font-size: 1.8em;
     color: #ddd;
-    transition: color 0.2s;
-}
-
-.stars i.fas {
-    color: #f99f1c;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .stars i:hover,
-.stars i:hover ~ i {
-    color: #f99f1c;
+.stars i.fas {
+    color: #ffc107;
+    transform: scale(1.1);
 }
 
 #rating-value {
     font-weight: bold;
-    color: #00A7B3;
+    color: #00a8cc;
 }
 
-/* Estilos para mostrar reseñas en comentarios */
-.comentario .resena-badge {
-    display: inline-block;
-    background: #f99f1c;
+/* BOTÓN PUBLICAR */
+#btn-publicar {
+    background: #00a8cc;
     color: white;
-    padding: 3px 10px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    margin-left: 10px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
     font-weight: bold;
-}
-
-.comentario .rating-stars {
-    display: inline-flex;
-    gap: 2px;
-    margin-left: 10px;
-    font-size: 0.9rem;
-}
-
-.comentario .rating-stars i {
-    color: #f99f1c;
-}
-
-.comentario .vivienda-info {
-    background: #f0f8f9;
-    padding: 10px 14px;
-    border-radius: 8px;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #555;
     cursor: pointer;
+    width: 100%;
     transition: all 0.3s ease;
-    border-left: 3px solid #00A7B3;
 }
 
-.comentario .vivienda-info:hover {
-    background: #e0f2f3;
-    transform: translateX(3px);
-    box-shadow: 0 2px 8px rgba(0, 167, 179, 0.2);
+#btn-publicar:hover {
+    background: #008fb3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 168, 204, 0.3);
 }
 
-.comentario .vivienda-info strong {
-    color: #00A7B3;
+/* TÍTULO DE COMENTARIOS */
+.titulo-comentarios {
+    color: #333;
+    font-size: 2em;
+    margin: 40px 0 25px 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #00a8cc;
+}
+
+/* LISTA DE COMENTARIOS */
+#lista-comentarios {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* COMENTARIO ITEM - BLOQUE INDIVIDUAL */
+.comentario-item {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-left: 4px solid #00a8cc;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.comentario-item:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+/* USUARIO */
+.comentario-item .usuario {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.comentario-item .usuario img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+}
+
+.comentario-item .usuario > div {
+    flex: 1;
+}
+
+.comentario-item .usuario h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.15em;
+    color: #333;
+    font-weight: 600;
+}
+
+.comentario-item .usuario small {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* TEXTO DEL COMENTARIO */
+.comentario-item > p {
+    margin: 15px 0 0 65px;
+    line-height: 1.7;
+    color: #444;
+    font-size: 1em;
+}
+
+/* BADGE DE RESEÑA */
+.resena-badge {
+    background: #00a8cc;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    font-weight: bold;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+/* RATING STARS EN COMENTARIOS */
+.rating-stars {
+    color: #ffc107;
+    font-size: 0.95em;
+    margin-left: 5px;
+}
+
+.rating-stars i {
+    margin-right: 2px;
+}
+
+/* VIVIENDA INFO (CLICKEABLE) */
+.vivienda-info {
+    cursor: pointer;
+    margin-top: 12px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.vivienda-info:hover {
+    background: #e3f2fd;
+    border-color: #00a8cc;
+    transform: translateX(5px);
+}
+
+.vivienda-info strong {
+    color: #00a8cc;
     font-size: 1.05em;
 }
 
-.comentario .vivienda-info small {
+.vivienda-info small {
     display: block;
     font-size: 0.85em;
-    color: #666;
-    margin-top: 5px;
+    color: #888;
+    margin-top: 8px;
+    text-align: center;
     font-style: italic;
 }
 
-.titulo-comentarios {
-    color: #00A7B3;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-}
-
+/* FOOTER */
 footer {
+    background: #333;
+    color: white;
     text-align: center;
-    padding: 1.5rem;
-    background-color: #E6F7F8;
-    color: #555;
-    margin-top: 3rem;
+    padding: 20px;
+    margin-top: 60px;
 }
 
-/*Para que sea responsive*/
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
+    .foro-container {
         padding: 15px;
+        margin: 20px auto;
+    }
+
+    .foro-container h1 {
+        font-size: 2em;
+    }
+
+    .formulario-comentario {
+        padding: 20px;
+    }
+
+    .comentario-item {
+        padding: 20px;
+    }
+
+    .comentario-item .usuario {
+        flex-direction: column;
         gap: 10px;
     }
 
-    .navbar ul {
-        flex-wrap: wrap;
-        justify-content: center;
+    .comentario-item > p {
+        margin-left: 0;
     }
 
-    .foro-container {
-        padding: 1rem;
+    .stars i {
+        font-size: 1.5em;
     }
 }
+
+@media (max-width: 480px) {
+    .foro-container h1 {
+        font-size: 1.5em;
+    }
+
+    .formulario-comentario h2 {
+        font-size: 1.2em;
+    }
+
+    .titulo-comentarios {
+        font-size: 1.5em;
+    }
+
+    .comentario-item .usuario img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
