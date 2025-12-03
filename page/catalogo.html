@@ -63,9 +63,19 @@
   <ul id="catalogoSuggestionsList" class="catalogo-suggestions"></ul>
 </header>
 
+<!-- TABS PARA FILTRO ALQUILER/VENTA -->
+<div class="catalog-tabs-container">
+  <button class="catalog-tab active" data-filter="alquiler">
+    <i class="fas fa-key"></i> Alquileres disponibles
+  </button>
+  <button class="catalog-tab" data-filter="venta">
+    <i class="fas fa-home"></i> Ventas disponibles
+  </button>
+</div>
+
 <!-- LISTA VERTICAL -->
 <section class="catalogo-list-section">
-  <h2>Viviendas disponibles</h2>
+  <h2 id="catalogoTitle">Alquileres disponibles</h2>
 
   <p id="catalogoEmpty" class="catalogo-empty" style="display:none;">
     No se encontraron viviendas para tu búsqueda. Prueba con otra zona.

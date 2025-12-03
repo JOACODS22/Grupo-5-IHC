@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9deb8e85-4829-430b-b9c9-37f5a149f52d" name="Changes" comment="Implement reservation management with localStorage and add review section in user profile">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/foro_estudiantil.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/foro_estudiantil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/foro_estudiantil.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/foro_estudiantil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/foro_estudiantil.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/foro_estudiantil.html" afterDir="false" />
+    <list default="true" id="9deb8e85-4829-430b-b9c9-37f5a149f52d" name="Changes" comment="Added separation box in catalogo.html and updated perfil">
+      <change beforePath="$PROJECT_DIR$/js/registrar.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/registrar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Flujo_actualizado" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,7 +75,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/catalogo__mejora&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -126,7 +123,12 @@
       <workItem from="1763573568248" duration="19000" />
       <workItem from="1763573624026" duration="922000" />
       <workItem from="1764726694922" duration="1402000" />
-      <workItem from="1764728119484" duration="1709000" />
+      <workItem from="1764728119484" duration="4143000" />
+      <workItem from="1764778227711" duration="3821000" />
+      <workItem from="1764784392646" duration="1299000" />
+      <workItem from="1764785717652" duration="183000" />
+      <workItem from="1764785918406" duration="96000" />
+      <workItem from="1764786029814" duration="918000" />
     </task>
     <task id="LOCAL-00001" summary="se añadio la pagina de confirmacion de reservas">
       <option name="closed" value="true" />
@@ -256,18 +258,61 @@
       <option name="project" value="LOCAL" />
       <updated>1764728721234</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add accessibility labels to comment form and enhance comment display">
+      <option name="closed" value="true" />
+      <created>1764729907204</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1764729907204</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added separation box in catalogo.html and updated perfil">
+      <option name="closed" value="true" />
+      <created>1764786731214</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1764786731214</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -291,6 +336,16 @@
     <MESSAGE value="Implement reservation management with localStorage and enhance user profile reservations display" />
     <MESSAGE value="Implement reservation management with localStorage and add review section to property details" />
     <MESSAGE value="Implement reservation management with localStorage and add review section in user profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement reservation management with localStorage and add review section in user profile" />
+    <MESSAGE value="Add accessibility labels to comment form and enhance comment display" />
+    <MESSAGE value="Added separation box in catalogo.html and updated perfil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added separation box in catalogo.html and updated perfil" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

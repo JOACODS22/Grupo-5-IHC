@@ -266,9 +266,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         reservasContainer.innerHTML = ultimasReservas.map(reserva => `
             <div class="reserva-item">
-                <p><strong>📍 ${reserva.inmueble}</strong></p>
+                <p>
+                    <strong
+                        onclick="navegarAViviendaDesdePerfilReserva('${reserva.inmueble.replace(/'/g, "\\'")}');"
+                        style="color: #00a8cc; cursor: pointer; text-decoration: none; transition: all 0.3s ease;"
+                        onmouseover="this.style.textDecoration='underline'; this.style.color='#0088aa';"
+                        onmouseout="this.style.textDecoration='none'; this.style.color='#00a8cc';">
+                        📍 ${reserva.inmueble}
+                    </strong>
+                </p>
                 <p>📅 ${reserva.fechaFormateada} - ⏰ ${reserva.hora}</p>
                 <p>💰 S/ ${reserva.inmueblePrecio}</p>
+                <small style="display: block; margin-top: 8px; font-size: 0.75rem; color: #999; font-style: italic;">
+                    💡 Click en el nombre para ver la vivienda
+                </small>
             </div>
         `).join('');
 
@@ -302,11 +313,22 @@ document.addEventListener('DOMContentLoaded', function() {
         resenasContainer.innerHTML = ultimasResenas.map(resena => {
             const stars = Array(resena.rating).fill('⭐').join('');
             return `
-                <div class="reserva-item" style="cursor: pointer;" onclick="window.location.href='foro_estudiantil.html'">
-                    <p><strong>🏠 ${resena.vivienda.nombre}</strong></p>
+                <div class="reserva-item" style="cursor: pointer; position: relative;" onclick="window.location.href='foro_estudiantil.html'">
+                    <p>
+                        <strong
+                            onclick="event.stopPropagation(); navegarAViviendaDesdePerfilResena('${resena.vivienda.nombre.replace(/'/g, "\\'")}');"
+                            style="color: #00a8cc; cursor: pointer; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.textDecoration='underline'; this.style.color='#0088aa';"
+                            onmouseout="this.style.textDecoration='none'; this.style.color='#00a8cc';">
+                            🏠 ${resena.vivienda.nombre}
+                        </strong>
+                    </p>
                     <p>${stars} (${resena.rating}/5)</p>
                     <p style="font-size: 0.9rem; color: #666;">${resena.texto.substring(0, 60)}${resena.texto.length > 60 ? '...' : ''}</p>
                     <small style="color: #888;">📅 ${resena.fecha}</small>
+                    <small style="display: block; margin-top: 8px; font-size: 0.75rem; color: #999; font-style: italic;">
+                        💡 Click en el nombre para ver la vivienda | Click en el resto para ver en el foro
+                    </small>
                 </div>
             `;
         }).join('');
@@ -355,6 +377,29 @@ document.addEventListener('DOMContentLoaded', function() {
     cargarResenasPerfil();
     cargarComentariosPerfil();
 });
+
+// ==========================================
+// NAVEGAR A VIVIENDA DESDE PERFIL (RESEÑA)
+// ==========================================
+function navegarAViviendaDesdePerfilResena(nombreVivienda) {
+    console.log("🔍 Navegando a vivienda desde perfil (reseña):", nombreVivienda);
+
+    // Redirigir al foro con el nombre de la vivienda para que maneje la navegación
+    // Usaremos el mismo sistema del foro que ya tiene la base de datos de viviendas
+    localStorage.setItem("viviendaABuscar", nombreVivienda);
+    window.location.href = "foro_estudiantil.html?navegar=true";
+}
+
+// ==========================================
+// NAVEGAR A VIVIENDA DESDE PERFIL (RESERVA)
+// ==========================================
+function navegarAViviendaDesdePerfilReserva(nombreVivienda) {
+    console.log("🔍 Navegando a vivienda desde perfil (reserva):", nombreVivienda);
+
+    // Usar el mismo sistema que para las reseñas
+    localStorage.setItem("viviendaABuscar", nombreVivienda);
+    window.location.href = "foro_estudiantil.html?navegar=true";
+}
 </script>
 </body>
 </html>
