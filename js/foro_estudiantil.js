@@ -86,6 +86,21 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarComentarios();
 
     // ==========================================
+    // NAVEGAR AUTOMÁTICAMENTE SI VIENE DESDE PERFIL
+    // ==========================================
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('navegar') === 'true') {
+        const viviendaABuscar = localStorage.getItem("viviendaABuscar");
+        if (viviendaABuscar) {
+            localStorage.removeItem("viviendaABuscar");
+            // Dar tiempo para que se cargue la página
+            setTimeout(() => {
+                navegarAVivienda(viviendaABuscar);
+            }, 100);
+        }
+    }
+
+    // ==========================================
     // MANEJAR PUBLICACIÓN
     // ==========================================
     document.getElementById("btn-publicar").addEventListener("click", () => {
@@ -394,16 +409,45 @@ const VIVIENDAS_DB = [
 function navegarAVivienda(nombreVivienda) {
     console.log("🔍 Buscando vivienda:", nombreVivienda);
 
-    // Normalizar el nombre para búsqueda más flexible
-    const nombreNormalizado = nombreVivienda.toLowerCase().trim();
+    // Función auxiliar para normalizar texto (eliminar acentos y espacios extras)
+    const normalizar = (texto) => texto.toLowerCase().trim()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .replace(/\s+/g, ' ');
 
-    // Buscar la vivienda en la base de datos
-    const vivienda = VIVIENDAS_DB.find(v => {
-        const tituloNormalizado = v.titulo.toLowerCase();
-        return tituloNormalizado.includes(nombreNormalizado) ||
-               nombreNormalizado.includes(tituloNormalizado) ||
-               tituloNormalizado === nombreNormalizado;
+    const nombreNormalizado = normalizar(nombreVivienda);
+
+    // Buscar primero por coincidencia exacta
+    let vivienda = VIVIENDAS_DB.find(v => {
+        const tituloNormalizado = normalizar(v.titulo);
+        return tituloNormalizado === nombreNormalizado;
     });
+
+    // Si no encuentra, buscar por palabras clave importantes (al menos 2 palabras significativas)
+    if (!vivienda) {
+        vivienda = VIVIENDAS_DB.find(v => {
+            const tituloNormalizado = normalizar(v.titulo);
+            const palabrasVivienda = nombreNormalizado.split(' ').filter(p => p.length > 3);
+
+            // Verificar si al menos 2 palabras importantes coinciden
+            const coincidencias = palabrasVivienda.filter(palabra =>
+                tituloNormalizado.includes(palabra)
+            );
+
+            return coincidencias.length >= 2;
+        });
+    }
+
+    // Si aún no encuentra, buscar por inclusión parcial o por zona
+    if (!vivienda) {
+        vivienda = VIVIENDAS_DB.find(v => {
+            const tituloNormalizado = normalizar(v.titulo);
+            const zonaNormalizada = normalizar(v.zona || "");
+
+            return tituloNormalizado.includes(nombreNormalizado) ||
+                   nombreNormalizado.includes(tituloNormalizado) ||
+                   (zonaNormalizada && nombreNormalizado.includes(zonaNormalizada));
+        });
+    }
 
     if (vivienda) {
         console.log("✅ Vivienda encontrada:", vivienda.titulo);
@@ -430,6 +474,7 @@ function navegarAVivienda(nombreVivienda) {
         window.location.href = "agendar_visita.html";
     } else {
         console.error("❌ No se encontró la vivienda:", nombreVivienda);
+        console.log("📋 Viviendas disponibles:", VIVIENDAS_DB.map(v => v.titulo));
         alert("⚠️ No se encontró información de esta vivienda. Por favor intenta desde el catálogo.");
     }
 }

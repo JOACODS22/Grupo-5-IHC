@@ -60,10 +60,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const emptyMsg = document.getElementById("catalogoEmpty");
   const pagination = document.getElementById("catalogoPagination");
+  const catalogoTitle = document.getElementById("catalogoTitle");
 
   const input = document.getElementById("catalogoSearchInput");
   const form = document.getElementById("catalogoSearchForm");
   const suggestionsList = document.getElementById("catalogoSuggestionsList");
+
+  // Tabs de filtro
+  const catalogTabs = document.querySelectorAll(".catalog-tab");
+  let currentFilter = "alquiler"; // Por defecto mostrar alquileres
 
   let filteredCards = cards.slice();
   let currentPage = 1;
@@ -99,21 +104,88 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // FILTRAR
-  function filterCatalog(query) {
-    const qNorm = normalizeText(query.trim());
+  // FILTRAR POR TIPO (ALQUILER/VENTA)
+  function filterByType(type) {
+    currentFilter = type;
+    const threshold = 10000;
 
-    filteredCards = cards.filter(card => {
-      const text = normalizeText(card.textContent);
-      const zone = normalizeText(card.dataset.zona || "");
-
-      if (text.includes(qNorm)) return true;
-
-      return levenshtein(qNorm, zone) <= 2;
+    let baseCards = cards.filter(card => {
+      const precio = parseInt(card.dataset.precio) || 0;
+      if (type === "alquiler") {
+        return precio < threshold;
+      } else {
+        return precio >= threshold;
+      }
     });
+
+    // Actualizar el título
+    if (type === "alquiler") {
+      catalogoTitle.textContent = "Alquileres disponibles";
+    } else {
+      catalogoTitle.textContent = "Ventas disponibles";
+    }
+
+    // Si hay un query de búsqueda, aplicar filtro adicional
+    const query = input.value.trim();
+    if (query) {
+      const qNorm = normalizeText(query);
+      filteredCards = baseCards.filter(card => {
+        const text = normalizeText(card.textContent);
+        const zone = normalizeText(card.dataset.zona || "");
+        if (text.includes(qNorm)) return true;
+        return levenshtein(qNorm, zone) <= 2;
+      });
+    } else {
+      filteredCards = baseCards;
+    }
 
     renderPage(1);
   }
+
+  // FILTRAR POR BÚSQUEDA
+  function filterCatalog(query) {
+    const qNorm = normalizeText(query.trim());
+    const threshold = 10000;
+
+    // Primero filtrar por tipo
+    let baseCards = cards.filter(card => {
+      const precio = parseInt(card.dataset.precio) || 0;
+      if (currentFilter === "alquiler") {
+        return precio < threshold;
+      } else {
+        return precio >= threshold;
+      }
+    });
+
+    // Luego aplicar filtro de búsqueda
+    if (qNorm) {
+      filteredCards = baseCards.filter(card => {
+        const text = normalizeText(card.textContent);
+        const zone = normalizeText(card.dataset.zona || "");
+
+        if (text.includes(qNorm)) return true;
+
+        return levenshtein(qNorm, zone) <= 2;
+      });
+    } else {
+      filteredCards = baseCards;
+    }
+
+    renderPage(1);
+  }
+
+  // EVENT LISTENERS PARA LAS PESTAÑAS
+  catalogTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      // Actualizar clases active
+      catalogTabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      // Filtrar por tipo
+      const filterType = tab.dataset.filter;
+      filterByType(filterType);
+    });
+  });
 
   // Buscador en tiempo real
   input.addEventListener("input", () => {
@@ -161,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (zonaParam) {
     const zNorm = zonaParam.toLowerCase();
     input.value = zonaParam;
-    filterCatalog(zNorm);
+    filterByType(currentFilter); // Aplicar filtro de tipo primero
 
     setTimeout(() => {
       document.querySelector(".catalogo-list-section").scrollIntoView({
@@ -171,10 +243,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   } else if (qFromURL) {
     input.value = qFromURL;
-    filterCatalog(qFromURL);
+    filterByType(currentFilter); // Aplicar filtro de tipo primero
 
   } else {
-    renderPage(1);
+    filterByType(currentFilter); // Mostrar alquileres por defecto
   }
 
   // PAGINACIÓN
