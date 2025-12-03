@@ -113,6 +113,92 @@ img {
 }
 
 /* ===============================
+   USER PROFILE DROPDOWN STYLES
+=============================== */
+.user-profile-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.user-profile-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  background: #007c91;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.user-profile-trigger:hover {
+  background: #005f6b;
+}
+
+.user-avatar {
+  font-size: 20px;
+}
+
+.user-name {
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.dropdown-arrow {
+  color: white;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.user-profile-trigger.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  color: #333 !important;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  font-size: 14px;
+}
+
+.dropdown-item:hover {
+  background: #f5f5f5;
+}
+
+.dropdown-icon {
+  font-size: 18px;
+}
+
+/* ===============================
    RESPONSIVE DESIGN - HEADER
 =============================== */
 /* Tablets grandes */
@@ -287,6 +373,53 @@ img {
   .btn-login, .btn-register {
     padding: 6px 8px;
     font-size: 10px;
+  }
+
+  .user-profile-dropdown {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .user-profile-trigger {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .user-name {
+    font-size: 12px;
+  }
+}
+
+/* Extra responsive improvements */
+@media (max-width: 850px) {
+  .header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logo-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    order: 2;
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .nav-buttons {
+    width: 100%;
+    justify-content: center;
+    order: 3;
+  }
+
+  .user-profile-dropdown {
+    margin: 0 auto;
   }
 }
 
@@ -466,6 +599,106 @@ main {
 }
 
 /* ===============================
+   SECONDARY FEATURES (Animated Blocks)
+=============================== */
+.features-secondary {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature-block {
+  background: linear-gradient(135deg, #007c91 0%, #00A7B3 100%);
+  padding: 30px 25px;
+  border-radius: 15px;
+  width: 280px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 124, 145, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s;
+}
+
+.feature-block:hover::before {
+  left: 100%;
+}
+
+.feature-block:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 124, 145, 0.4);
+}
+
+.feature-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.feature-block h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.feature-block p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* Animation on scroll */
+.animated-card {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animated-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.animated-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.animated-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
    RECOMMENDATIONS
 =============================== */
 .recommendations {
@@ -601,6 +834,57 @@ main {
 
 .join-form button:hover {
   background: #2f6e72;
+}
+
+/* ===============================
+   RESPONSIVE - FEATURE BLOCKS
+=============================== */
+@media (max-width: 768px) {
+  .features-secondary {
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .feature-block {
+    width: 100%;
+    max-width: 320px;
+    padding: 25px 20px;
+  }
+
+  .feature-icon {
+    font-size: 40px;
+  }
+
+  .feature-block h3 {
+    font-size: 18px;
+  }
+
+  .feature-block p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-secondary {
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .feature-block {
+    padding: 20px 15px;
+  }
+
+  .feature-icon {
+    font-size: 36px;
+  }
+
+  .feature-block h3 {
+    font-size: 16px;
+  }
+
+  .feature-block p {
+    font-size: 12px;
+  }
 }
 
 /* ===============================

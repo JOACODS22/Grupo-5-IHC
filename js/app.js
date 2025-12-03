@@ -102,7 +102,6 @@ const HeaderManager = {
       `;
 
       navButtons.appendChild(cont);
-      this.addDropdownStyles();
 
       const trigger = cont.querySelector(".user-profile-trigger");
       const menu = cont.querySelector(".dropdown-menu");
@@ -110,16 +109,24 @@ const HeaderManager = {
       trigger.addEventListener("click", e => {
         e.stopPropagation();
         menu.classList.toggle("show");
+        trigger.classList.toggle("active");
       });
 
       document.addEventListener("click", e => {
-        if (!cont.contains(e.target)) menu.classList.remove("show");
+        if (!cont.contains(e.target)) {
+          menu.classList.remove("show");
+          trigger.classList.remove("active");
+        }
       });
 
       cont.querySelector("#btnCerrarSesionDropdown").addEventListener("click", e => {
         e.preventDefault();
         if (confirm("¿Cerrar sesión?")) SessionManager.logout();
       });
+    } else {
+      // Update the username if it changed
+      const nameSpan = cont.querySelector(".user-name");
+      if (nameSpan) nameSpan.textContent = user.nombre;
     }
   },
 
@@ -138,18 +145,6 @@ const HeaderManager = {
         btn.onclick = () => (window.location.href = basePath + "page/" + page);
       }
     });
-  },
-
-  addDropdownStyles: function () {
-    if (document.getElementById("dropdownStyles")) return;
-
-    const s = document.createElement("style");
-    s.id = "dropdownStyles";
-    s.textContent = `
-      .dropdown-menu { background: white; }
-      .dropdown-item { color: #333 !important; }
-    `;
-    document.head.appendChild(s);
   }
 };
 

@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9deb8e85-4829-430b-b9c9-37f5a149f52d" name="Changes" comment="Enhance card links and improve responsive design for navigation" />
+    <list default="true" id="9deb8e85-4829-430b-b9c9-37f5a149f52d" name="Changes" comment="Enhance card links and improve responsive design for navigation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/agendar_visita.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/agendar_visita.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/perfil_usuario.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/perfil_usuario.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/agendar_visita.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/agendar_visita.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/catalogo.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/catalogo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/foro_estudiantil.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/foro_estudiantil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/mapa_seguridad.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/mapa_seguridad.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/perfil_usuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/perfil_usuario.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,10 +33,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Flujo_actualizado" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -32,22 +45,22 @@
     &quot;assignee&quot;: &quot;jotabe12&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/jotabe12/ihc_live_web.git",
-    "accountId": "6dfe1ef5-b3ec-49aa-a828-a5bddac11f57"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jotabe12/ihc_live_web.git&quot;,
+    &quot;accountId&quot;: &quot;6dfe1ef5-b3ec-49aa-a828-a5bddac11f57&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "JOACODS22",
-    "repository": "Grupo-5-IHC"
+    &quot;owner&quot;: &quot;JOACODS22&quot;,
+    &quot;repository&quot;: &quot;Grupo-5-IHC&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -72,7 +85,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",

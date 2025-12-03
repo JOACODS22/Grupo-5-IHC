@@ -82,6 +82,90 @@ body {
     opacity: 0.85;
 }
 
+/* User Profile Dropdown */
+.user-profile-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.user-profile-trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background: #007c91;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.user-profile-trigger:hover {
+    background: #005f6b;
+}
+
+.user-avatar {
+    font-size: 20px;
+}
+
+.user-name {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.dropdown-arrow {
+    color: white;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.user-profile-trigger.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    color: #333 !important;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    font-size: 14px;
+}
+
+.dropdown-item:hover {
+    background: #f5f5f5;
+}
+
+.dropdown-icon {
+    font-size: 18px;
+}
+
 /* Main Content */
 .main-content {
     padding: 40px 20px;
@@ -636,17 +720,74 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .header {
         flex-direction: column;
-        gap: 20px;
-        padding: 20px;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .logo-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo {
+        height: 45px;
     }
 
     .nav-menu {
-        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 15px;
-        text-align: center;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
+
+    .nav-buttons {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .btn-login, .btn-register {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .user-profile-dropdown {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 12px;
+    }
+
+    .logo {
+        height: 42px;
+    }
+
+    .nav-menu {
+        gap: 12px;
+    }
+
+    .nav-menu a {
+        font-size: 13px;
+    }
+
+    .nav-buttons {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .btn-login, .btn-register {
+        padding: 7px 14px;
+        font-size: 12px;
     }
 
     .scheduling-section,
@@ -666,6 +807,69 @@ body {
         flex-direction: column;
         gap: 10px;
         text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 10px;
+    }
+
+    .logo {
+        height: 38px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .nav-buttons {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .btn-login, .btn-register {
+        flex: 1;
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 8px;
+    }
+
+    .logo {
+        height: 35px;
+    }
+
+    .nav-menu {
+        gap: 8px;
+    }
+
+    .nav-menu a {
+        font-size: 11px;
+    }
+
+    .btn-login, .btn-register {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+
+    .user-profile-trigger {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .user-name {
+        font-size: 12px;
     }
 }
 
