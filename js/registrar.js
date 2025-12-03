@@ -59,6 +59,28 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
         }
     }
 
+    // Validar número telefónico peruano (debe comenzar con 9 y tener 9 dígitos)
+    const celularRegex = /^9\d{8}$/;
+    if (!celularRegex.test(celular)) {
+        let mensajeCelularInvalido = document.getElementById('mensajeCelularInvalido');
+        if (!mensajeCelularInvalido) {
+            mensajeCelularInvalido = document.createElement('p');
+            mensajeCelularInvalido.id = 'mensajeCelularInvalido';
+            mensajeCelularInvalido.style.color = 'red';
+            mensajeCelularInvalido.style.marginTop = '10px';
+            mensajeCelularInvalido.textContent = 'El número de celular debe comenzar con 9 y tener 9 dígitos (ej: 987654321).';
+            document.querySelector('.form-content').insertBefore(mensajeCelularInvalido, document.getElementById('registerForm').nextSibling);
+        } else {
+            mensajeCelularInvalido.style.display = 'block';
+        }
+        return;
+    } else {
+        let mensajeCelularInvalido = document.getElementById('mensajeCelularInvalido');
+        if (mensajeCelularInvalido) {
+            mensajeCelularInvalido.style.display = 'none';
+        }
+    }
+
     // Obtener todos los usuarios registrados
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 

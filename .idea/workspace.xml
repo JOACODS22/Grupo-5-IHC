@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9deb8e85-4829-430b-b9c9-37f5a149f52d" name="Changes" comment="Add accessibility labels to comment form and enhance comment display">
-      <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilotDiffState.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/catalogoStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/catalogoStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/catalogo.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/catalogo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/foro_estudiantil.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/foro_estudiantil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/catalogo.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/catalogo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/perfil_usuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/perfil_usuario.html" afterDir="false" />
+    <list default="true" id="9deb8e85-4829-430b-b9c9-37f5a149f52d" name="Changes" comment="Added separation box in catalogo.html and updated perfil">
+      <change beforePath="$PROJECT_DIR$/js/registrar.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/registrar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +128,7 @@
       <workItem from="1764784392646" duration="1299000" />
       <workItem from="1764785717652" duration="183000" />
       <workItem from="1764785918406" duration="96000" />
-      <workItem from="1764786029814" duration="493000" />
+      <workItem from="1764786029814" duration="918000" />
     </task>
     <task id="LOCAL-00001" summary="se añadio la pagina de confirmacion de reservas">
       <option name="closed" value="true" />
@@ -272,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764729907204</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added separation box in catalogo.html and updated perfil">
+      <option name="closed" value="true" />
+      <created>1764786731214</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1764786731214</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +337,8 @@
     <MESSAGE value="Implement reservation management with localStorage and add review section to property details" />
     <MESSAGE value="Implement reservation management with localStorage and add review section in user profile" />
     <MESSAGE value="Add accessibility labels to comment form and enhance comment display" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add accessibility labels to comment form and enhance comment display" />
+    <MESSAGE value="Added separation box in catalogo.html and updated perfil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added separation box in catalogo.html and updated perfil" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
